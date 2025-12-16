@@ -15,5 +15,3 @@ services:
       SYSLOG_PASSWORD: ${APP_PASSWORD}
     ports:
       - "514:514/udp"
-    volumes:
-      - ${APP_DATA_DIR}/logs:/var/log
