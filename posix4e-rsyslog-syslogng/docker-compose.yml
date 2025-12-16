@@ -19,7 +19,7 @@ services:
       - "601:6601/tcp"
     volumes:
       - ${APP_DATA_DIR}/config:/config
-      - ${APP_DATA_DIR}/logs:/var/log/syslog-ng
+      - ${APP_DATA_DIR}/logs:/var/log
 
   web:
     image: filebrowser/filebrowser:latest
