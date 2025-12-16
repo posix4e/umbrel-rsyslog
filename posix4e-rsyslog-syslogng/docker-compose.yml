@@ -22,8 +22,8 @@ services:
       - ${APP_DATA_DIR}/logs:/var/log
 
   web:
-    image: filebrowser/filebrowser:latest
+    image: ghcr.io/logdyhq/logdy:latest
     restart: on-failure
-    command: ["--noauth", "--root", "/srv", "--port", "8080"]
+    command: ["follow", "/logs/messages", "--port", "8080", "--ui-ip", "0.0.0.0"]
     volumes:
-      - ${APP_DATA_DIR}/logs:/srv
+      - ${APP_DATA_DIR}/logs:/logs:ro
