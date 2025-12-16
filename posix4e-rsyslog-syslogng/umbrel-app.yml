@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: posix4e-rsyslog-syslogng
 name: Syslog-ng Server
-tagline: Flexible syslog server with Logdy web UI
+tagline: Centralized syslog server with real-time web UI
 icon: https://raw.githubusercontent.com/posix4e/umbrel-rsyslog/main/posix4e-rsyslog-syslogng/icon.svg
 category: networking
 version: "1.0.0"
@@ -11,7 +11,7 @@ description: >-
   and IETF (RFC5424) syslog formats - compatible with most routers and network devices.
 
 
-  Includes Logdy - a powerful real-time log viewer with filtering, searching, and parsing.
+  Includes Frontail - a real-time log viewer with search and filtering.
 
 
   Configure your routers, switches, servers, and other devices to send syslog messages
@@ -26,7 +26,7 @@ description: >-
 
   - UDP 514 and TCP 601 listeners
 
-  - Logdy web UI with real-time tailing, filtering, and search
+  - Frontail web UI with real-time tailing and search
 
   - Log rotation and retention
 developer: LinuxServer.io
