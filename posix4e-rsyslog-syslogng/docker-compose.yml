@@ -22,8 +22,8 @@ services:
       - ${APP_DATA_DIR}/logs:/var/log
 
   web:
-    image: ghcr.io/logdyhq/logdy:latest
+    image: mthenw/frontail:latest
     restart: on-failure
-    command: ["follow", "/logs/messages", "--port", "8080", "--ui-ip", "0.0.0.0"]
+    command: ["/logs/messages", "--ui-highlight", "--ui-highlight-preset", "/preset/syslog.json", "-n", "1000"]
     volumes:
       - ${APP_DATA_DIR}/logs:/logs:ro
