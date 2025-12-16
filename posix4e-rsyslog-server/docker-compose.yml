@@ -12,6 +12,6 @@ services:
     stop_grace_period: 1m
     environment:
       SYSLOG_USERNAME: admin
-      SYSLOG_PASSWORD: umbrel
+      SYSLOG_PASSWORD: ${APP_PASSWORD}
     ports:
       - "514:514/udp"
