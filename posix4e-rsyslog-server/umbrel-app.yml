@@ -1,8 +1,8 @@
 manifestVersion: 1
-id: rsyslog-server
+id: posix4e-rsyslog-server
 name: Rsyslog Server
 tagline: Centralized syslog server with web interface
-icon: https://raw.githubusercontent.com/posix4e/umbrel-rsyslog/main/rsyslog-server/icon.svg
+icon: https://raw.githubusercontent.com/posix4e/umbrel-rsyslog/main/posix4e-rsyslog-server/icon.svg
 category: networking
 version: "1.0.0"
 port: 80
