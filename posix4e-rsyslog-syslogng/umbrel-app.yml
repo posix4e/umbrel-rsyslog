@@ -1,0 +1,43 @@
+manifestVersion: 1
+id: posix4e-rsyslog-syslogng
+name: Syslog-ng Server
+tagline: Flexible syslog server with file browser UI
+icon: https://raw.githubusercontent.com/posix4e/umbrel-rsyslog/main/posix4e-rsyslog-syslogng/icon.svg
+category: networking
+version: "1.0.0"
+port: 5142
+description: >-
+  Syslog-ng is a flexible, highly scalable syslog server that supports BSD (RFC3164)
+  and IETF (RFC5424) syslog formats - compatible with most routers and network devices.
+
+
+  Includes a file browser web UI for viewing and downloading log files.
+
+
+  Configure your routers, switches, servers, and other devices to send syslog messages
+  to your Umbrel's IP address on UDP port 514 or TCP port 601.
+
+
+  Features:
+
+  - Supports BSD/RFC3164 format (used by most routers including Alta Labs)
+
+  - Supports IETF/RFC5424 format
+
+  - UDP 514 and TCP 601 listeners
+
+  - File browser UI for viewing logs
+
+  - Log rotation and retention
+developer: LinuxServer.io
+website: https://www.syslog-ng.com/
+repo: https://github.com/linuxserver/docker-syslog-ng
+support: https://github.com/linuxserver/docker-syslog-ng/issues
+gallery: []
+releaseNotes: ""
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: posix4e
+submission: https://github.com/posix4e/umbrel-rsyslog

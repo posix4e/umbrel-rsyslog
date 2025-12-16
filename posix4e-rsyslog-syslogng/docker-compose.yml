@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: posix4e-rsyslog-syslogng_web_1
+      APP_PORT: 8080
+
+  syslog:
+    image: lscr.io/linuxserver/syslog-ng:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    ports:
+      - "514:5514/udp"
+      - "601:6601/tcp"
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/logs:/var/log/syslog-ng
+
+  web:
+    image: filebrowser/filebrowser:latest
+    restart: on-failure
+    command: ["--noauth", "--root", "/srv", "--port", "8080"]
+    volumes:
+      - ${APP_DATA_DIR}/logs:/srv
