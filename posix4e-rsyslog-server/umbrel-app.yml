@@ -33,6 +33,6 @@ releaseNotes: ""
 dependencies: []
 path: ""
 defaultUsername: admin
-defaultPassword: ""
+defaultPassword: "umbrel"
 submitter: posix4e
 submission: https://github.com/posix4e/umbrel-rsyslog
