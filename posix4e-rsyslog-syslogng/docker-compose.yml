@@ -24,6 +24,6 @@ services:
   web:
     image: mthenw/frontail:latest
     restart: on-failure
-    entrypoint: ["/bin/sh", "-c", "touch /logs/messages && exec /frontail/bin/frontail /logs/messages -n 1000"]
+    entrypoint: ["/bin/sh", "-c", "touch /logs/messages && exec /frontail/bin/frontail /logs/messages -n 1000 -p 8080"]
     volumes:
       - ${APP_DATA_DIR}/logs:/logs
