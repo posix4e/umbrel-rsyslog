@@ -1,23 +1,19 @@
+version: "3.7"
+
 services:
   app_proxy:
     environment:
-      APP_HOST: rsyslog-gui_server_1
+      APP_HOST: rsyslog-server_web_1
       APP_PORT: 80
 
-  server:
+  web:
     image: aguyonnet/rsyslog-gui:latest
     restart: on-failure
     stop_grace_period: 1m
     environment:
-      SYSLOG_USERNAME: ${APP_RSYSLOG_USERNAME:-admin}
-      SYSLOG_PASSWORD: ${APP_RSYSLOG_PASSWORD:-}
+      SYSLOG_USERNAME: admin
+      SYSLOG_PASSWORD: ${APP_PASSWORD}
     ports:
       - "514:514/udp"
     volumes:
       - ${APP_DATA_DIR}/logs:/var/log
-    networks:
-      - default
-
-networks:
-  default:
-    name: rsyslog-server_default
