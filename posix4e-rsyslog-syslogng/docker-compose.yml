@@ -24,6 +24,6 @@ services:
   web:
     image: mthenw/frontail:latest
     restart: on-failure
-    command: ["/logs/messages", "--ui-highlight", "--ui-highlight-preset", "/preset/syslog.json", "-n", "1000"]
+    command: ["/logs/messages", "-n", "1000"]
     volumes:
       - ${APP_DATA_DIR}/logs:/logs:ro
